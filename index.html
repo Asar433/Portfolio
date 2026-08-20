@@ -22,8 +22,14 @@
   --orange:#ff7a18;
   --life:#c28a00;
 }
+
 *{box-sizing:border-box;}
-html{scrollbar-width:thin;scrollbar-color:var(--gold) rgba(11,47,107,0.18);}
+
+html{
+  scrollbar-width:thin;
+  scrollbar-color:var(--gold) rgba(11,47,107,0.18);
+}
+
 body{
   margin:0;
   font-family:"Segoe UI",Arial,sans-serif;
@@ -35,15 +41,34 @@ body{
     linear-gradient(135deg,var(--bg),var(--bg2));
   overflow-x:hidden;
 }
+
 body::-webkit-scrollbar{width:11px;}
-body::-webkit-scrollbar-track{background:rgba(11,47,107,0.10);border-radius:999px;}
+
+body::-webkit-scrollbar-track{
+  background:rgba(11,47,107,0.10);
+  border-radius:999px;
+}
+
 body::-webkit-scrollbar-thumb{
   background:linear-gradient(180deg,var(--gold),#ffb84d,var(--primary2));
   border-radius:999px;
   border:3px solid rgba(255,255,255,0.75);
 }
-.wrapper{width:min(1240px,92%);margin:0 auto;padding:16px 0 30px;}
-.top-nav{display:flex;justify-content:flex-end;gap:10px;margin-bottom:18px;flex-wrap:wrap;}
+
+.wrapper{
+  width:min(1240px,92%);
+  margin:0 auto;
+  padding:16px 0 30px;
+}
+
+.top-nav{
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+  margin-bottom:18px;
+  flex-wrap:wrap;
+}
+
 .nav-btn{
   text-decoration:none;
   min-height:38px;
@@ -62,8 +87,18 @@ body::-webkit-scrollbar-thumb{
   transition:all .25s ease;
   backdrop-filter:blur(10px);
 }
-.nav-btn:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 0 0 4px rgba(244,197,66,0.45),0 16px 36px rgba(91,29,145,0.26);}
-.hero{text-align:center;padding:0 18px 6px;margin-top:0;}
+
+.nav-btn:hover{
+  transform:translateY(-2px) scale(1.02);
+  box-shadow:0 0 0 4px rgba(244,197,66,0.45),0 16px 36px rgba(91,29,145,0.26);
+}
+
+.hero{
+  text-align:center;
+  padding:0 18px 6px;
+  margin-top:0;
+}
+
 .hero h1{
   margin:0;
   font-size:clamp(44px,6.2vw,78px);
@@ -72,7 +107,9 @@ body::-webkit-scrollbar-thumb{
   font-weight:950;
   letter-spacing:-1.5px;
 }
+
 .hero h1 span{color:var(--orange);}
+
 .hero p{
   max-width:940px;
   margin:20px auto 0;
@@ -80,6 +117,7 @@ body::-webkit-scrollbar-thumb{
   font-size:clamp(20px,2.6vw,33px);
   line-height:1.35;
 }
+
 .portal{
   background:rgba(255,255,255,0.72);
   border:1px solid rgba(20,85,163,0.16);
@@ -89,8 +127,22 @@ body::-webkit-scrollbar-thumb{
   backdrop-filter:blur(14px);
   margin-top:22px;
 }
-.portal-title{text-align:center;margin:0 0 28px;color:var(--primary);font-size:clamp(30px,4vw,50px);font-weight:950;}
-.metric-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:28px 0;}
+
+.portal-title{
+  text-align:center;
+  margin:0 0 28px;
+  color:var(--primary);
+  font-size:clamp(30px,4vw,50px);
+  font-weight:950;
+}
+
+.metric-strip{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  margin:28px 0;
+}
+
 .metric{
   background:linear-gradient(180deg,#ffffff,#edf5ff);
   border:1px solid rgba(20,85,163,0.18);
@@ -99,9 +151,29 @@ body::-webkit-scrollbar-thumb{
   text-align:center;
   box-shadow:0 14px 30px rgba(11,47,107,0.12);
 }
-.metric strong{display:block;color:var(--primary);font-size:clamp(24px,3vw,34px);font-weight:950;}
-.metric span{display:block;margin-top:6px;color:var(--muted);font-size:14px;line-height:1.35;font-weight:750;}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;}
+
+.metric strong{
+  display:block;
+  color:var(--primary);
+  font-size:clamp(24px,3vw,34px);
+  font-weight:950;
+}
+
+.metric span{
+  display:block;
+  margin-top:6px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.35;
+  font-weight:750;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px;
+}
+
 .card{
   position:relative;
   min-height:245px;
@@ -119,6 +191,7 @@ body::-webkit-scrollbar-thumb{
   justify-content:space-between;
   color:inherit;
 }
+
 .card::before{
   content:"";
   position:absolute;
@@ -129,19 +202,61 @@ body::-webkit-scrollbar-thumb{
   border-radius:50%;
   background:color-mix(in srgb,var(--accent) 16%,transparent);
 }
-.card:hover{transform:translateY(-8px);box-shadow:0 30px 70px rgba(11,47,107,0.26);}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 30px 70px rgba(11,47,107,0.26);
+}
+
 .icon{
-  width:68px;height:68px;border-radius:22px;display:flex;align-items:center;justify-content:center;
-  font-size:34px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;
-  box-shadow:0 14px 28px color-mix(in srgb,var(--accent) 32%,transparent);position:relative;z-index:1;
+  width:68px;
+  height:68px;
+  border-radius:22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:34px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:white;
+  box-shadow:0 14px 28px color-mix(in srgb,var(--accent) 32%,transparent);
+  position:relative;
+  z-index:1;
 }
-.card h2{margin:20px 0 10px;color:var(--accent);font-size:26px;line-height:1.15;position:relative;z-index:1;}
-.card p,.panel p{margin:0;color:var(--muted);font-size:16px;line-height:1.58;position:relative;z-index:1;}
+
+.card h2{
+  margin:20px 0 10px;
+  color:var(--accent);
+  font-size:26px;
+  line-height:1.15;
+  position:relative;
+  z-index:1;
+}
+
+.card p,.panel p{
+  margin:0;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.58;
+  position:relative;
+  z-index:1;
+}
+
 .open{
-  margin-top:20px;display:inline-flex;align-items:center;justify-content:center;width:max-content;
-  background:rgba(255,255,255,0.84);border:1px solid color-mix(in srgb,var(--accent) 22%,transparent);
-  color:var(--accent);font-weight:900;padding:10px 16px;border-radius:999px;position:relative;z-index:1;
+  margin-top:20px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:max-content;
+  background:rgba(255,255,255,0.84);
+  border:1px solid color-mix(in srgb,var(--accent) 22%,transparent);
+  color:var(--accent);
+  font-weight:900;
+  padding:10px 16px;
+  border-radius:999px;
+  position:relative;
+  z-index:1;
 }
+
 .cv{--accent:#0878d8;--accent2:#0b4f9c;}
 .letter{--accent:#23a455;--accent2:#0b7dba;}
 .doc{--accent:#6f2dbd;--accent2:#8d4de8;}
@@ -149,6 +264,7 @@ body::-webkit-scrollbar-thumb{
 .skills{--accent:#c28a00;--accent2:#f4c542;}
 .project{--accent:#dc3545;--accent2:#a71d2a;}
 .business{--accent:#ff7a18;--accent2:#b45309;}
+
 .panel{
   background:linear-gradient(180deg,#ffffff,#f8fbff);
   border:1px solid rgba(20,85,163,0.20);
@@ -156,40 +272,128 @@ body::-webkit-scrollbar-thumb{
   padding:30px;
   box-shadow:0 18px 42px rgba(11,47,107,0.15);
 }
-.section-title{color:var(--primary);font-size:30px;margin:0 0 16px;font-weight:950;}
-.timeline{display:grid;gap:18px;}
-.role{border-left:7px solid var(--blue);padding:0 0 0 18px;}
-.role h3{margin:0;color:var(--primary);font-size:22px;}
-.role .meta{color:var(--muted);font-weight:850;margin:4px 0 8px;}
-ul{margin:10px 0 0 20px;padding:0;}
-li{margin:8px 0;line-height:1.55;color:#273245;}
-.letter-body{max-width:900px;margin:0 auto;}
-.letter-body p{font-size:18px;line-height:1.72;margin:0 0 18px;color:#273245;}
-.signature{font-weight:950;color:var(--primary);}
-.footer-container{text-align:center;margin:34px 0 0;}
-footer{
-  display:inline-block;background:rgba(255,255,255,0.78);border-top:3px solid var(--gold);
-  color:#46505f;padding:12px 24px;border-radius:18px;font-size:14px;font-weight:800;
-  font-style:italic;box-shadow:0 12px 28px rgba(11,47,107,0.14);
+
+.section-title{
+  color:var(--primary);
+  font-size:30px;
+  margin:0 0 16px;
+  font-weight:950;
 }
-@media(max-width:1050px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));}.metric-strip{grid-template-columns:repeat(2,minmax(0,1fr));}}
+
+.timeline{
+  display:grid;
+  gap:18px;
+}
+
+.role{
+  border-left:7px solid var(--blue);
+  padding:0 0 0 18px;
+}
+
+.role h3{
+  margin:0;
+  color:var(--primary);
+  font-size:22px;
+}
+
+.role .meta{
+  color:var(--muted);
+  font-weight:850;
+  margin:4px 0 8px;
+}
+
+ul{
+  margin:10px 0 0 20px;
+  padding:0;
+}
+
+li{
+  margin:8px 0;
+  line-height:1.55;
+  color:#273245;
+}
+
+.letter-body{
+  max-width:900px;
+  margin:0 auto;
+}
+
+.letter-body p{
+  font-size:18px;
+  line-height:1.72;
+  margin:0 0 18px;
+  color:#273245;
+}
+
+.signature{
+  font-weight:950;
+  color:var(--primary);
+}
+
+.footer-container{
+  text-align:center;
+  margin:34px 0 0;
+}
+
+footer{
+  display:inline-block;
+  background:rgba(255,255,255,0.78);
+  border-top:3px solid var(--gold);
+  color:#46505f;
+  padding:12px 24px;
+  border-radius:18px;
+  font-size:14px;
+  font-weight:800;
+  font-style:italic;
+  box-shadow:0 12px 28px rgba(11,47,107,0.14);
+}
+
+@media(max-width:1050px){
+  .grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .metric-strip{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
 @media(max-width:720px){
-  .grid,.metric-strip{grid-template-columns:1fr;}
-  .portal{padding:22px;border-radius:26px;}
-  .hero{margin-top:8px;}
-  .hero p{font-size:21px;}
-  .card{min-height:auto;}
-  .top-nav{justify-content:center;}
+  .grid,.metric-strip{
+    grid-template-columns:1fr;
+  }
+
+  .portal{
+    padding:22px;
+    border-radius:26px;
+  }
+
+  .hero{
+    margin-top:8px;
+  }
+
+  .hero p{
+    font-size:21px;
+  }
+
+  .card{
+    min-height:auto;
+  }
+
+  .top-nav{
+    justify-content:center;
+  }
 }
 
 </style>
 </head>
+
 <body>
 
 <div class="wrapper">
+
   <div class="top-nav">
-    <a class="nav-btn" href="Asar_Iqbal_Covering_Letter.html">Covering Letter</a>
-    <a class="nav-btn" href="Asar_Iqbal_Covering_Letter.doc">Download Letter</a>
+    <a class="nav-btn" href="Asar_Iqbal_Covering_Letter.doc">Download Cover Letter</a>
     <a class="nav-btn" href="Asar_Iqbal_CV_Updated_Tech.docx">Download CV</a>
   </div>
 
@@ -199,15 +403,33 @@ footer{
   </section>
 
   <section class="portal">
+
     <h2 class="portal-title">Recruiter Snapshot</h2>
+
     <div class="metric-strip">
-      <div class="metric"><strong>£237k/year</strong><span>Recurring lean operating system design + labour savings</span></div>
-      <div class="metric"><strong>£132k/year</strong><span>Cost reduction from machinery relocation</span></div>
-      <div class="metric"><strong>71%</strong><span>Productivity uplift after KPI-led redesign</span></div>
-      <div class="metric"><strong>£900k+</strong><span>Savings via SAP-driven data development</span></div>
+      <div class="metric">
+        <strong>£237k/year</strong>
+        <span>Recurring lean operating system design + labour savings</span>
+      </div>
+
+      <div class="metric">
+        <strong>£132k/year</strong>
+        <span>Cost reduction from machinery relocation</span>
+      </div>
+
+      <div class="metric">
+        <strong>71%</strong>
+        <span>Productivity uplift after KPI-led redesign</span>
+      </div>
+
+      <div class="metric">
+        <strong>£900k+</strong>
+        <span>Savings via SAP-driven data development</span>
+      </div>
     </div>
 
     <div class="grid">
+
       <a href="#experience" class="card cv">
         <div>
           <div class="icon">CV</div>
@@ -216,14 +438,16 @@ footer{
         </div>
         <span class="open">View Experience</span>
       </a>
-      <a href="Asar_Iqbal_Covering_Letter.html" class="card letter">
+
+      <a href="Asar_Iqbal_Covering_Letter.doc" class="card letter">
         <div>
           <div class="icon">CL</div>
-          <h2>Covering Letter</h2>
+          <h2>Cover Letter</h2>
           <p>A professional supporting letter focused on ownership, operational impact, and continuous improvement.</p>
         </div>
-        <span class="open">Open Covering Letter</span>
+        <span class="open">Download Cover Letter</span>
       </a>
+
       <a href="Asar_Iqbal_CV_Updated_Tech.docx" class="card doc">
         <div>
           <div class="icon">DOC</div>
@@ -232,6 +456,7 @@ footer{
         </div>
         <span class="open">Download Word CV</span>
       </a>
+
       <a href="#skills" class="card skills">
         <div>
           <div class="icon">SQL</div>
@@ -240,6 +465,7 @@ footer{
         </div>
         <span class="open">View Skills</span>
       </a>
+
       <a href="#project" class="card project">
         <div>
           <div class="icon">ML</div>
@@ -248,6 +474,7 @@ footer{
         </div>
         <span class="open">View Project</span>
       </a>
+
       <a href="#business" class="card business">
         <div>
           <div class="icon">ROI</div>
@@ -256,23 +483,33 @@ footer{
         </div>
         <span class="open">View Business Impact</span>
       </a>
+
     </div>
+
   </section>
 
   <section id="experience" class="portal">
+
     <h2 class="portal-title">Experience</h2>
+
     <div class="panel timeline">
+
       <div class="role">
         <h3>PHINIA Delphi - Production Planner</h3>
         <div class="meta">Stonehouse, UK | June 2026 - Present</div>
-        <ul><li>Own daily production planning in a high-pressure manufacturing environment where planning accuracy protects plant continuity.</li>
-<li>Use SAP and Excel fluently to manage production priorities, monitor planning data, and coordinate decisions across operations, engineering, logistics, and production teams.</li>
-<li>Lead a planning automation project, applying scripting and workflow automation thinking to reduce repetitive Excel and SAP-based tasks.</li>
-<li>Apply a lean mindset to live operations, identifying planning inefficiencies, resolving daily constraints, and improving flow where no two days are the same.</li></ul>
+
+        <ul>
+          <li>Own daily production planning in a high-pressure manufacturing environment where planning accuracy protects plant continuity.</li>
+          <li>Use SAP and Excel fluently to manage production priorities, monitor planning data, and coordinate decisions across operations, engineering, logistics, and production teams.</li>
+          <li>Lead a planning automation project, applying scripting and workflow automation thinking to reduce repetitive Excel and SAP-based tasks.</li>
+          <li>Apply a lean mindset to live operations, identifying planning inefficiencies, resolving daily constraints, and improving flow where no two days are the same.</li>
+        </ul>
       </div>
+
       <div class="role">
         <h3>PHINIA Delphi - Lean Engineer</h3>
         <div class="meta">Stonehouse, UK | August 2025 - May 2026</div>
+
         <ul>
           <li>Delivered £237k/year in recurring savings through lean operating system design, work content studies, WELS analysis, machine balancing, and labour optimisation.</li>
           <li>Developed SAP-driven data and analysis that helped identify excess inventory, improve planning visibility, and unlock £900k+ worth of savings.</li>
@@ -281,18 +518,22 @@ footer{
           <li>Managed and coordinated two engineering technicians, demonstrating ownership, accountability, and delivery under time constraints.</li>
         </ul>
       </div>
+
       <div class="role">
         <h3>PHINIA Delphi - Summer Internship</h3>
         <div class="meta">Stonehouse, UK | June 2025 - July 2025</div>
+
         <ul>
           <li>Returned after placement to develop a visual management tool that standardised plant operations and improved day-to-day visibility.</li>
           <li>Applied lean design training to process, machine, and production-line design, improving solutions through rapid iteration and practical feedback.</li>
           <li>Supported continuous-improvement activity across safety, quality, cost, and delivery priorities.</li>
         </ul>
       </div>
+
       <div class="role">
         <h3>PHINIA Delphi - Placement Engineer</h3>
         <div class="meta">Stonehouse, UK | September 2023 - August 2024</div>
+
         <ul>
           <li>Led a cross-functional team of 6 to relocate packaging machinery, analysed 17 KPIs in Excel, and delivered a 71% productivity uplift with £132k annual cost reduction.</li>
           <li>Built SQL-Grafana dashboards for real-time KPI monitoring, improving traceability, audit readiness, and early risk detection.</li>
@@ -302,9 +543,11 @@ footer{
           <li>Delivered multilingual briefings to 40+ operators and hosted supplier visits from Turkey and across the UK; awarded partial sponsorship for performance.</li>
         </ul>
       </div>
+
       <div class="role">
         <h3>Euro Car Parts, Sainsbury, Shell - Part-time Customer Assistant</h3>
         <div class="meta">Nottingham, UK | June 2022 - September 2023 | August 2024 - Present</div>
+
         <ul>
           <li>Delivered 80+ daily customer interactions, using consultative questioning to recommend tailored automotive parts and solutions.</li>
           <li>Drove sales in promotional categories, achieving a 15% bonus for leading regional performance in targeted product incentives.</li>
@@ -312,37 +555,48 @@ footer{
           <li>Supported order fulfilment and stock management, building an understanding of how supply chain, product availability, and pricing shape customer conversations.</li>
         </ul>
       </div>
+
       <div class="role">
         <h3>DHL Aviation Depot - Warehouse Operative</h3>
         <div class="meta">East Midlands Airport, UK | October 2022 - August 2023</div>
+
         <ul>
           <li>Worked night shifts in a high-volume air freight hub, meeting strict cut-off times for international cargo dispatch.</li>
           <li>Loaded, unloaded, and packed freight containers while following aviation safety and manual handling procedures.</li>
           <li>Coordinated with shift teams to protect on-time loading and reduce delays to departing flights.</li>
         </ul>
       </div>
+
       <div class="role">
         <h3>Amazon EMA2 - Warehouse Operative</h3>
         <div class="meta">Nottingham, UK | June 2021 - September 2021</div>
+
         <ul>
           <li>Exceeded hourly pack-rate targets, ranking in the top 10 while maintaining accuracy and quality standards.</li>
           <li>Improved packaging speed while maintaining quality and supported new hires with practical process guidance.</li>
         </ul>
       </div>
+
       <div class="role">
         <h3>Amazon Step-up Work Experience</h3>
         <div class="meta">London, UK | November 2025</div>
+
         <ul>
           <li>Developed a prototype CV-matching application that analysed candidate experience and aligned CV content to Amazon Leadership Principles.</li>
           <li>Worked in teams to design and pitch data-led operational solutions, applying customer-focused thinking under time constraints.</li>
         </ul>
       </div>
+
     </div>
+
   </section>
 
   <section class="portal">
+
     <h2 class="portal-title">Technology, Hackathons & Projects</h2>
+
     <div class="grid">
+
       <div class="card cv">
         <div>
           <div class="icon">AI</div>
@@ -350,6 +604,7 @@ footer{
           <p>Attended two Microsoft hackathons, including a Microsoft-sponsored Agentic AI pitch, applying structured problem solving and rapid solution design.</p>
         </div>
       </div>
+
       <div class="card tools">
         <div>
           <div class="icon">MG</div>
@@ -357,6 +612,7 @@ footer{
           <p>Participated in a London hackathon, applying data analysis, teamwork, and commercial problem-solving to practical challenge briefs.</p>
         </div>
       </div>
+
       <div class="card business">
         <div>
           <div class="icon">McK</div>
@@ -364,6 +620,7 @@ footer{
           <p>Joined a London hackathon with SkillStruct, strengthening client-style communication, problem structuring, and evidence-led recommendations.</p>
         </div>
       </div>
+
       <div class="card letter">
         <div>
           <div class="icon">AZ</div>
@@ -371,6 +628,7 @@ footer{
           <p>Built a car-themed AI application using GitHub Copilot and Azure AI tools, gaining exposure to agentic AI, cloud architecture, and cybersecurity principles.</p>
         </div>
       </div>
+
       <div class="card project">
         <div>
           <div class="icon">BI</div>
@@ -378,6 +636,7 @@ footer{
           <p>Built Power BI dashboards using SQL and DAX for a 46,000+ attendee event, tracking congestion, throughput, response times, and peak-risk periods.</p>
         </div>
       </div>
+
       <div class="card skills">
         <div>
           <div class="icon">LAB</div>
@@ -385,12 +644,17 @@ footer{
           <p>Built a Proxmox home server and explored virtualisation, firewall configuration, switch connectivity, Power Automate, n8n, scripting logic, and Excel/SAP automation opportunities.</p>
         </div>
       </div>
+
     </div>
+
   </section>
 
   <section class="portal">
+
     <h2 class="portal-title">Education, Skills & Leadership</h2>
+
     <div class="grid">
+
       <div id="project" class="card project">
         <div>
           <div class="icon">BEng</div>
@@ -398,6 +662,7 @@ footer{
           <p>Loughborough University, BEng Automotive Engineering, 2:1. Final-year project: real-time road hazard detection for consumer autonomous vehicle safety.</p>
         </div>
       </div>
+
       <div id="skills" class="card skills">
         <div>
           <div class="icon">5S</div>
@@ -405,6 +670,7 @@ footer{
           <p>Python, SQL, Power BI, Excel VBA, Grafana, MATLAB, SolidWorks, AutoCAD, NX, Power Automate, n8n, Proxmox, networking basics, Kaizen, 5S, and VSM.</p>
         </div>
       </div>
+
       <div id="business" class="card business">
         <div>
           <div class="icon">£</div>
@@ -412,12 +678,17 @@ footer{
           <p>Sneaker reselling business generating £9k profit in 6 months; vehicle repair service generating £3.8k in 3 months through pricing discipline, customer service, and cash-flow management.</p>
         </div>
       </div>
+
     </div>
+
   </section>
 
   <section class="portal">
+
     <h2 class="portal-title">Engineering & Product Thinking</h2>
+
     <div class="grid">
+
       <div class="card project">
         <div>
           <div class="icon">EV</div>
@@ -425,6 +696,7 @@ footer{
           <p>Led electrical power design for a fully electric autonomous vehicle concept, covering battery pack design, mass distribution, cooling-system routing, CAD layout, and structural considerations.</p>
         </div>
       </div>
+
       <div class="card cv">
         <div>
           <div class="icon">CFD</div>
@@ -432,6 +704,7 @@ footer{
           <p>Completed finite element and CFD-based analysis projects, developing the ability to interpret simulation results and apply modelling outputs to design decisions.</p>
         </div>
       </div>
+
       <div class="card letter">
         <div>
           <div class="icon">MBA</div>
@@ -439,12 +712,17 @@ footer{
           <p>Building toward customer-facing technology, engineering, automation, and future MBA study to become a commercially minded technical leader.</p>
         </div>
       </div>
+
     </div>
+
   </section>
 
   <div class="footer-container">
-    <footer>Designed for Asar Iqbal | Tech, Engineering & Customer-Facing Problem Solving</footer>
+    <footer>
+      Designed for Asar Iqbal | Tech, Engineering & Customer-Facing Problem Solving
+    </footer>
   </div>
+
 </div>
 
 </body>
